@@ -1,4 +1,4 @@
-module Trying
+module Demo
 {
     interface Response
     {

@@ -1,6 +1,8 @@
-public class ResponderI implements Trying.Response {
+public class ResponderI implements Demo.Response
+{
 
-    public int giveResponse(String info, String msg, com.zeroc.Ice.Current current) {
+    public int giveResponse(String info, String msg, com.zeroc.Ice.Current current)
+    {
         System.out.println(info);
         if(isPositiveNumber(msg)) {
             return fib(Integer.parseInt(msg));
@@ -9,7 +11,8 @@ public class ResponderI implements Trying.Response {
         return 0;
     }
 
-    private int fib(int n) {
+    private int fib(int n)
+    {
         int num0 = 0, num1 = 1, sum = 0;
         System.out.printf("fib(%s) = %s %n", 0, 0);
         if(n > 0){
@@ -25,7 +28,8 @@ public class ResponderI implements Trying.Response {
         return sum;
     }
 
-    private boolean isPositiveNumber(String msg) {
+    private boolean isPositiveNumber(String msg)
+    {
         return msg.matches("^+([0-9]\\d*)$");
     }
 
